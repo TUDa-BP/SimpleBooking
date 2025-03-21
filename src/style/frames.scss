@@ -1,0 +1,34 @@
+.warning-register {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  right: 0;
+  z-index: 100;
+  width: calc(100% - 1em);
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+}
+
+.content {
+  flex: 1;
+  margin-left: 290px;
+  margin-right: 20px;
+  width: calc(100% - 310px);
+  transition: margin-left 0.3s ease;
+}
+
+.content-expanded {
+  margin-left: 75px;
+  width: calc(100% - 95px);
+}
+
+/* this is used for the footer on the overlays showing the buttons*/
+.overlay-buttongroup {
+  button {
+    height: 2.5em;
+    margin-right: 0.5em;
+    padding: 0 2em 0 2em;
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../node_modules/bootstrap/scss/bootstrap" as *;
+
+.status-active {
+    color: green;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.status-disabled {
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}

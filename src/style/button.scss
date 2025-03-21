@@ -1,0 +1,57 @@
+@use "../../node_modules/bootstrap/scss/bootstrap" as *;
+
+.classic-button {
+   background-color: $indigo-100  !important;
+   color: $indigo-500  !important;
+   border: none  !important;
+}
+.classic-button:hover {
+   background-color: $indigo-200  !important;
+   color: $indigo-600  !important;
+   cursor: pointer !important;
+}
+.classic-button:active {
+    background-color: $indigo-300  !important;
+    color: $indigo-700  !important;
+    cursor: pointer !important;
+}
+
+.action-buttons{
+   display: flex;
+ }
+.btn-edit{
+  background: none !important;
+  color: #297CF6 !important;
+  &:hover{
+    background: none !important;
+    color: $indigo-600 !important;
+  }
+}
+.btn-delete{
+  background: none !important;
+  color: #E35D6A !important;
+  &:hover{
+    background: none !important;
+    color: $indigo-600 !important;
+  }
+}
+
+.buttons-top-right{
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  top: 2rem;
+  right: 20px;
+}
+.overlay-button{
+ color: black !important;
+ background: none !important;
+ border: 2px solid !important; 
+ border-radius: 28.5px;
+ padding-right: 20px;;
+ &:hover{
+   background-color: $indigo-200  !important;
+   color: $indigo-600  !important;
+   cursor: pointer !important;
+ }
+}

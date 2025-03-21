@@ -1,0 +1,1 @@
+export const hardwareBookingURL = "http://localhost:5173/hardware-booking"

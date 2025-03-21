@@ -1,0 +1,62 @@
+/// <reference types="vite/client" />
+
+// Concretising data types of .env variables
+interface ImportMetaEnv {
+  readonly VITE_PUBLIC_URL: string;
+  readonly VITE_PROJECT_ID: string;
+  readonly VITE_RESET_LINK: string;
+  // Databases
+  readonly VITE_DB_ID: string;
+  // Collections
+  readonly VITE_DB_USER_ID: string;
+  readonly VITE_DB_ROOMBOOKING_ID: string;
+  readonly VITE_DB_PLACEBOOKING_ID: string;
+  readonly VITE_DB_HWBOOKING_ID: string;
+  readonly VITE_DB_ROOMBOOKING_ID: string;
+  // Collections used for place booking
+  readonly VITE_DB_PLACE_ID: string;
+  readonly VITE_DB_PLACEFEATURE_ID: string;
+  readonly VIDE_DB_ROOM_ID: string;
+  readonly VITE_DB_FEATURE_ID: string;
+  // Collections used for hardware booking
+  readonly VITE_DB_HW_ID: string;
+  readonly VITE_DB_STORAGELOCATION_ID: string;
+  readonly VITE_DB_TIME_QUOTA_ID: string;
+  readonly VITE_DB_TIME_QUOTA_DOC_ID: string;
+  //Storage
+  readonly VITE_STORAGE_USERELIGIBILITY_ID: string;
+  // Crucial database default values
+  readonly VITE_TIMESLOT_SIZE: number;
+  readonly VITE_BEGIN_BOOKINGTIME: number;
+  readonly VITE_END_BOOKINGTIME: number;
+  // Function IDs
+  readonly VITE_CLOUDFUNCTION_REGISTER_ID: string;
+  readonly VITE_CLOUDFUNCTION_ACCOUNTMANAGEMENT_ID: string;
+  readonly VITE_CLOUDFUNCTION_PLACEBOOKING_ID: string;
+  readonly VITE_CLOUDFUNCTION_HARDWAREBOOKING_ID: string;
+  readonly VITE_CLOUDFUNCTION_USERBOOKINGMANAGEMENT_ID: string;
+  readonly VITE_CLOUDFUNCTION_ROOMBOOKING_ID: string;
+  readonly VITE_CLOUDFUNCTION_ROOMMANAGEMENT_ID: string;
+  readonly VITE_CLOUDFUNCTION_HWMANAGEMENT_ID: string;
+  // Function endpoints
+  readonly VITE_CLOUDFUNCTION_REGISTER_ENDPOINTREGISTER: string;
+  readonly VITE_CLOUDFUNCTION_ACCOUNTMANAGEMENT_ENDPOINTIMPORTCSV: string;
+  readonly VITE_CLOUDFUNCTION_ACCOUNTMANAGEMENT_ENDPOINTUPDATEACCOUNT: string;
+  readonly VITE_CLOUDFUNCTION_ACCOUNTMANAGEMENT_ENDPOINTDELETEACCOUNT: string;
+  readonly VITE_CLOUDFUNCTION_ACCOUNTMANAGEMENT_ENDPOINTCREATEACCOUNT: string;
+  readonly VITE_CLOUDFUNCTION_PLACEBOOKING_ENDPOINTBOOKPLACE: string;
+  readonly VITE_CLOUDFUNCTION_HARDWAREBOOKING_ENDPOINTBOOKHARDWARE: string;
+  readonly VITE_CLOUDFUNCTION_USERBOOKINGMANAGEMENT_ENDPOINTDELETEPLACEBOOKING: string;
+  readonly VITE_CLOUDFUNCTION_USERBOOKINGMANAGEMENT_ENDPOINTDELETEHWBOOKING: string;
+  readonly VITE_CLOUDFUNCTION_USERBOOKINGMANAGEMENT_ENDPOINTDELETEROOMBOOKING: string;
+  readonly VITE_CLOUDFUNCTION_ROOMBOOKING_ENDPOINTBOOKROOM: string;
+  readonly VITE_CLOUDFUNCTION_ROOMMANAGEMENT_ENDPOINTTOGGLEPLACE:string;
+  readonly VITE_CLOUDFUNCTION_ROOMMANAGEMENT_ENDPOINTTOGGLEROOM:string;
+  readonly VITE_CLOUDFUNCTION_ROOMMANAGEMENT_ENDPOINTDELETEPLACE: string;
+  readonly VITE_CLOUDFUNCTION_ROOMMANAGEMENT_ENDPOINTDELETEROOM: string;
+  readonly VITE_CLOUDFUNCTION_HWMANAGEMENT_ENDPOINTTOGGLEHW: string;
+  readonly VITE_CLOUDFUNCTION_HWMANAGEMENT_ENDPOINTDELETEHW: string;
+}
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}

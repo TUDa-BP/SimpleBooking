@@ -1,0 +1,61 @@
+<DOCTYPE html>
+    <html lang="en">
+    <style>
+        * {
+            font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+        
+        }
+        body {
+            max-width: 100vw; /* Limit to 100% of the viewport width */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            word-break: break-word;
+        }
+
+        .register {
+            margin: 2em 0 2em 0;
+            text-align: center;
+        }
+
+        a {
+            text-align: center;
+            color: #6610F2;
+            text-decoration: none;
+            background-color: #EADDFF;
+            padding: 1em;
+            border-radius: 10px;
+        }
+
+        a:hover {
+            background-color: #6610F2;
+            color: #EADDFF;
+        }
+
+        .code {
+            background-color: #EADDFF;
+            border: 1px solid #EADDFF;
+            padding: 1em;
+            border-radius: 10px;
+        }
+    </style>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration</title>
+    </head>
+    <body>
+        <h1>Hello <%= first_name %>
+                <%= last_name %>,
+        </h1>
+        <p>An account has been created for you in the SimpleBooking Tool. Please verify your email address by clicking the link below. Note that this link can only be used once!</p>
+        <div class="register">
+            <a href="<%= baseurl %>/<%= code %>" target="_blank">finish registration</a>
+        </div>
+        <p>Your code is:<br>
+        <div class="code"><%= code %></div>
+        <div>
+            <p>If you did not sign up for an account with us, there is no need to take any action. You can safely disregard this email.</p>
+        </div>
+    </body>
+
+    </html>

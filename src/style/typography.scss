@@ -1,0 +1,36 @@
+@use "../../node_modules/bootstrap/scss/bootstrap" as *;
+
+@mixin font_properties($line_height, $font_size:16px, $font_weight: 400){
+    font-style: normal;
+    font-size: $font_size;
+    font-weight: $font_weight;
+    line-height: $line_height;
+}
+
+.p-login {
+    margin-bottom: -3.5%;
+    color: var(--Gray-500, #ADB5BD);
+    @include font_properties(14px, 14px, 400);
+}
+
+::placeholder {
+    color: var(--Gray-500, #ADB5BD);
+    @include font_properties(20px);
+}
+
+.label-login{
+    color: var(--Gray-500, #ADB5BD);
+    /* Body/Base text */
+    @include font_properties(25px);
+}
+
+
+hr.solid {
+    margin: 15px 0;
+}
+
+header {
+  padding-top: 1.5rem;
+  color: black;
+  text-align: left;
+}

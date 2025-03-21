@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        * {
+            font-family: 'Helvetica', 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            max-width: 100vw;
+            overflow-x: hidden;
+            word-break: break-word;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 0.75em;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f9;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            background-color: #6610F2;
+            padding: 1em;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: #520dc2;
+        }
+
+        .footer {
+            margin-top: 1em;
+            font-size: 0.9em;
+            color: #888;
+            text-align: center;
+        }
+
+        .place-description {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 1em;
+        }
+
+        .contains-reserved-slots {
+            display: flex;
+            align-items: center;
+            margin-top: 1em;
+            margin-bottom: 1em;
+
+            .blue-bar {
+                width: 5px;
+                height: 30px;
+                background-color: #0d6efd;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello <%= user.first_name %>
+                <%= user.last_name %>,</h1>
+        <p>Your booking has been confirmed. Here are the details:</p>
+        <div class="place-description">
+            <h3>Booking Location</h3>
+            Room Number:<%= room.room_number %><br>
+                Place ID:<%= place.place_id %>
+        </div>
+        <% if (booked.length> 0 && booked.some(slot => slot.booking_type === "reserved")) { %>
+            <div class="contains-reserved-slots">
+                <div class="blue-bar"></div>
+                <span>Some bookings were marked as reserved due to insufficient time quota. This means that some users are allowed to overbook them.</span>
+            </div>
+            <% } %>
+                <% if (booked.length> 0) { %>
+                    <p>The following bookings were accepted:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Booking Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% booked.forEach(function(slot) { %>
+                                <tr>
+                                    <td>
+                                        <%= slot.start_time %>
+                                    </td>
+                                    <td>
+                                        <%= slot.end_time %>
+                                    </td>
+                                    <td>
+                                        <%= slot.booking_type %>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
+                    <% } %>
+                        <% if (notBooked.length> 0) { %>
+                            <p style="margin-top: 1em;">The following bookings were not accepted:</p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Start Time</th>
+                                        <th>End Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% notBooked.forEach(function(slot) { %>
+                                        <tr>
+                                            <td>
+                                                <%= slot.start_time %>
+                                            </td>
+                                            <td>
+                                                <%= slot.end_time %>
+                                            </td>
+                                        </tr>
+                                        <% }); %>
+                                </tbody>
+                            </table>
+                            <% } %>
+                                <p style="margin-top: 1em;">Thank you for your Booking!</p>
+                                <p class="footer"><i>This email was auto-generated by the SimpleBooking Tool.</i>
+                                </p>
+    </div>
+</body>
+
+</html>

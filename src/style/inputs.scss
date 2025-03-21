@@ -1,0 +1,12 @@
+@use "../../node_modules/bootstrap/scss/bootstrap" as *;
+@use "../../node_modules/bootstrap/scss/bootstrap" as *;
+
+input:focus, select:focus {
+    border-color: $indigo-500 !important;
+    box-shadow: 0 0 0 0.25rem #c29ffab7 !important; 
+}
+
+select {
+    background-color: #7749F8;
+    color: white;
+}
