@@ -7,27 +7,27 @@
   <br>
 </h1>
 
-<h4 align="center">A user-friendly setup for booking rooms, workstations & equipment,<br> adapted for institutes <a href="https://www.tu-darmstadt.de/" target="_blank">TU Darmstadt</a>.</h4>
+<h4 align="center">A user-friendly setup for booking rooms, workstations & equipment,<br> adapted for institutes at <a href="https://www.tu-darmstadt.de/" target="_blank">TU Darmstadt</a>.</h4>
 
 <p align="center">
     <a href="https://nodejs.org/">
         <img src="https://img.shields.io/badge/node.js-v22.11.0-blue?logo=node.js&logoColor=white" alt="npm     v22.11.0">
-    </a>
+    </a> 
     <a href="https://vuejs.org/">
         <img src="https://img.shields.io/badge/Vue.js-v3.5.13-1EAEDB?logo=vue.js&logoColor=white" alt="Vue. js v3.5.13">
-    </a>
+    </a> 
     <a href="https://vite.dev/">
         <img src="https://img.shields.io/badge/Vite-v5.4.14-brightgreen?logo=vite&logoColor=white"  alt="Vite v5.4.14">
-    </a>
+    </a> 
     <a href="https://pinia.vuejs.org/">
         <img src="https://img.shields.io/badge/Pinia-v2.3.1-yellow?logo=pinia&logoColor=white" alt="Pinia   v2.3.1">
-    </a>
+    </a> 
     <a href="https://www.npmjs.com/">
         <img src="https://img.shields.io/badge/npm package-v10.9.0-CB3837?logo=npm&logoColor=white"     alt="npm v10.9.0">
-    </a>
+    </a> 
     <a href="https://getbootstrap.com/">
         <img src="https://img.shields.io/badge/Bootstrap-v5.2.10-563D7C?logo=bootstrap&logoColor=white"     alt="Bootstrap v5.2.10">
-    </a>
+    </a> 
     <a href="https://appwrite.io/">
         <img src="https://img.shields.io/badge/Appwrite-v0.16.0-000000?logo=appwrite&logoColor=white"   alt="Appwrite v0.16.0">
     </a>
@@ -36,9 +36,10 @@
 
 <p align="center">
   <a href="#key-key-features">Key Features</a> •
-    <a href="#computer-tech-stack">Tech Stack</a> •
+  <a href="#computer-tech-stack">Tech Stack</a> •
   <a href="#wrench-how-to-setup">How To Setup</a> •
   <a href="#page_facing_up-wiki">Wiki</a> •
+  <a href="#handshake-contributors">Contributors</a> •
   <a href="#copyright-license">License</a>
 </p>
 
@@ -194,6 +195,15 @@ The [wiki](https://github.com/TUDa-BP/SimpleBooking/wiki) contains the following
   - variables to set in appwrite
 - testing
 - use cases
+
+## :handshake: Contributors
+
+- [tim-carlo](https://github.com/tim-carlo)
+- [FelixBauer01](https://github.com/FelixBauer01)
+- [Hal1maE](https://github.com/Hal1maE)
+- [DrMarlonso](https://github.com/DrMarlonso)
+- [dilaranm](https://github.com/dilaranm)
+
 
 ## :copyright: License
 
